@@ -61,8 +61,7 @@ h6 {
 }
 
 .container {
-  padding-inline: 1.5rem;
-  max-width: 1160px;
+  padding-inline: clamp(1.5rem, -1.777rem + 13.981vw, 15rem);
   margin: 0 auto;
 }
 
@@ -85,8 +84,9 @@ header .logo > img {
   height: 60px;
 }
 
-header nav {
+header nav a {
   color: var(--clr-gray);
+  text-decoration: none;
 }
 
 header hr {
@@ -94,28 +94,25 @@ header hr {
   float: right;
 }
 
-main {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
 /* hero */
 
 #hero {
   position: relative;
   margin-block: 1.5rem;
+  min-height: 420px;
 }
 #hero .hero-img {
   display: block;
   position: absolute;
   top: 0;
   right: 0;
-  width: clamp(15rem, -3.66rem + 79.618vw, 54.063rem);
-  max-width: 43%;
+  width: clamp(15rem, 2.52rem + 53.248vw, 41.125rem);
   z-index: 0;
 }
 
 #hero .container {
+  display: grid;
+  align-content: center;
   position: relative;
   z-index: 1;
 }
@@ -221,11 +218,11 @@ main {
     width: unset;
   }
   #hero p {
-    width: 52%;
+    width: 55%;
   }
 }
 
-@media (min-width:992px) {
+@media (min-width:920px) {
   /* header */
   header .logo > img {
     height: 120px;
