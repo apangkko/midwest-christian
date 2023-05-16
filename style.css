@@ -6,6 +6,61 @@
   --clr-light-gray: #e7e7e7;
 }
 
+/* ---------- font-face ---------- */
+@font-face {
+  font-family: 'Archivo Expanded';
+  src: url('./fonts/ArchivoExpanded-Black.woff2') format('woff2'),
+      url('./fonts/ArchivoExpanded-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo Expanded';
+  src: url('./fonts/ArchivoExpanded-ExtraBold.woff2') format('woff2'),
+      url('./fonts/ArchivoExpanded-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo Expanded';
+  src: url('./fonts/ArchivoExpanded-Bold.woff2') format('woff2'),
+      url('./fonts/ArchivoExpanded-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo Expanded';
+  src: url('./fonts/ArchivoExpanded-Regular.woff2') format('woff2'),
+      url('./fonts/ArchivoExpanded-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo Expanded';
+  src: url('./fonts/ArchivoExpanded-Light.woff2') format('woff2'),
+      url('./fonts/ArchivoExpanded-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo Expanded';
+  src: url('./fonts/ArchivoExpanded-Thin.woff2') format('woff2'),
+      url('./fonts/ArchivoExpanded-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ---------- Resets ---------- */
 
 *,
