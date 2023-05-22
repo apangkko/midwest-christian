@@ -1,5 +1,5 @@
 :root {
-  --clr-black: #000;
+  --clr-black: #101010;
   --clr-white: #fff;
   --clr-orange: #fa913c;
   --clr-gray: #aaa;
@@ -7,7 +7,7 @@
   --container-padding: clamp(1.5rem, -1.777rem + 13.981vw, 15rem);
 }
 
-/* ---------- font-face ---------- */
+/* ==================== font-face ==================== */
 @font-face {
   font-family: 'Archivo Expanded';
   src: url('./fonts/ArchivoExpanded-Black.woff2') format('woff2'),
@@ -62,7 +62,7 @@
   font-display: swap;
 }
 
-/* ---------- Resets ---------- */
+/* ==================== Resets ==================== */
 
 *,
 *::before,
@@ -113,7 +113,7 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* ---------- Utility Classes ---------- */
+/* ==================== Utility Classes ==================== */
 .d-flex {
   display: flex;
 }
@@ -126,19 +126,47 @@ h6 {
   padding-inline: var(--container-padding);
   margin: 0 auto;
 }
+.hilight {
+  border-radius: 100px;
+  padding-inline: .5rem;
+}
+.btn {
+  background-color: var(--clr-orange);
+  border: 1px solid var(--clr-orange);
+  border-radius: 100px;
+  color: var(--clr-white);
+  font-size: clamp(0.875rem, 0.576rem + 1.274vw, 1.5rem);
+  font-weight: 700;
+  padding: clamp(1rem, 0.881rem + 0.51vw, 1.25rem) 1.5rem;
+  text-transform: uppercase;
+  transition: .3s ease-out;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+.btn-white {
+  background-color: var(--clr-white);
+  color: var(--clr-orange);
+}
 
-/* ---------- Styles ---------- */
+/* ==================== Styles ==================== */
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
 h1, h2 {
   text-transform: uppercase;
+}
+h2 {
+  font-weight: 800;
+  margin-bottom: 1.5rem;
 }
 hr {
   border: 0;
   border-bottom: 1px solid var(--clr-black);
-}
-
-body {
-  max-width: 1920px;
-  margin: 0 auto;
 }
 
 /* header */
@@ -154,7 +182,6 @@ header .logo > img {
 
 header nav a {
   color: var(--clr-gray);
-  text-decoration: none;
 }
 
 header hr {
@@ -205,11 +232,9 @@ header hr {
 }
 
 
-#hero p:first-of-type span {
+#hero .hilight {
   color: var(--clr-white);
   background-color: var(--clr-orange);
-  border-radius: .5rem;
-  padding-inline: .5rem;
 }
 
 /* sub menu */
@@ -219,7 +244,6 @@ header hr {
   background-repeat: no-repeat, no-repeat, repeat-y, no-repeat;
 }
 .bg-basketball .container {
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   color: var(--clr-white);
@@ -240,7 +264,6 @@ header hr {
   font-size: clamp(0.625rem, 0.207rem + 1.783vw, 1.5rem);
   font-weight: 900;
   text-align: center;
-  text-decoration: none;
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -264,10 +287,9 @@ header hr {
 .subMenu__txt p:nth-child(2) {
   font-size: clamp(2rem, 1.522rem + 2.038vw, 3rem);
 }
-.subMenu__txt p:nth-child(2) span {
+.subMenu__txt .hilight {
   color: var(--clr-orange);
   background-color: var(--clr-black);
-  border-radius: .5rem;
   padding-inline: 1rem;
 }
 
@@ -276,10 +298,6 @@ header hr {
   position: relative;
   background-color: var(--clr-light-gray);
   padding-block-start: clamp(2rem, 0.567rem + 6.115vw, 5rem);
-}
-:has(#imgLearning, #elgibility ) h2 {
-  font-weight: 800;
-  margin-bottom: 1.5rem;
 }
 #imgLearning hr {
   position: absolute;
@@ -298,6 +316,9 @@ header hr {
 .imgLearning__txt1 {
   align-self: center;
   margin-top: 1.5rem;
+}
+#imgLearning .hilight {
+  background-color: var(--clr-white);
 }
 .imgLearning__txt2 {
   margin-top: 1rem;
@@ -325,10 +346,109 @@ header hr {
   width: clamp(6.563rem, 5.518rem + 4.459vw, 8.75rem);
 }
 
-/* ---------- MEDIA QUERY ---------- */
+/* Testimonial */
+#testimonial {
+  padding-block: clamp(2.5rem, 1.306rem + 5.096vw, 5rem);
+}
+#testimonial h2 {
+  color: var(--clr-orange);
+  text-align: center;
+  margin-bottom: clamp(1.5rem, 1.022rem + 2.038vw, 2.5rem);
+}
+.testiCard {
+  display: grid;
+  font-size: clamp(0.75rem, 0.69rem + 0.255vw, 0.875rem);
+  grid-template-columns: clamp(7.25rem, 5.339rem + 8.153vw, 11.25rem) 1fr;
+  gap: clamp(0.625rem, -0.032rem + 2.803vw, 2rem);
+}
+.testi-img {
+  width: clamp(7.25rem, 5.339rem + 8.153vw, 11.25rem);
+  height: clamp(7.25rem, 5.339rem + 8.153vw, 11.25rem);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.testi-img img {
+  object-fit: cover;
+}
+.testi-txt {
+  display: grid;
+  align-content: center;
+}
+.testi-txt p {
+  font-size: inherit;
+}
+.testi-name {
+  margin-top: clamp(1rem, 0.761rem + 1.019vw, 1.5rem);
+  font-size: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.testiSlider-control {
+  position: relative;
+  height: 48px;
+  margin-top: 1rem;
 
+}
+.swiper-button-prev, .swiper-button-next {
+  position: absolute;
+  top: 0;
+  margin-top: unset;
+}
+.swiper-button-prev {
+  left: calc(50% - 2rem);
+  transform: translateX(-50%);
+}
+.swiper-button-next {
+  right: calc(50% - 2rem);
+  transform: translateX(50%);
+}
+.slider-arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: var(--clr-orange);
+}
+.slider-arrow::after {
+  content: '→';
+  font-size: 1.5rem;
+  color: var(--clr-white);
+}
+.swiper-button-prev::after {
+  transform: scaleX(-1);
+}
+
+/* CTA */
+.cta-heading {
+  text-align: center;
+}
+#cta {
+  background-image: url(./images/home_cta_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  padding-block: clamp(2.5rem, 1.306rem + 5.096vw, 5rem);
+}
+#cta .d-flex {
+  justify-content: center;
+  gap: clamp(0.625rem, 0.207rem + 1.783vw, 1.5rem);
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--clr-orange);
+}
+.copyright {
+  background-color: var(--clr-black);
+}
+
+/* ==================== MEDIA QUERY ==================== */
+
+/* ---------- 768px ---------- */
 @media (min-width: 768px) {
-  
   /* hero */
   #hero {
     margin: 3rem 0 5rem;
@@ -338,7 +458,7 @@ header hr {
     width: unset;
   }
   #hero p {
-    width: 57%;
+    width: 56%;
   }
 
   /* Imagine Learning & Elgibility Registration */
@@ -382,8 +502,25 @@ header hr {
     text-align: center;
     align-self: center;
   }
+
+  /* Testimonial */
+  .testiCard {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-content: start;
+    padding-inline: 1.5rem;
+    text-align: center;
+    height: auto;
+  }
+  .testiCard:not(:first-child) {
+    border-left: 1px solid var(--clr-black);
+  }
+  .testiSlider-control {
+    margin-top: 1.5rem;
+  }
 }
 
+/* ---------- 920px ---------- */
 @media (min-width:920px) {
   /* header */
   header .logo > img {
@@ -417,5 +554,11 @@ header hr {
   .subMenu__txt p:nth-child(1) {
     margin-top: 7.5rem;
     margin-bottom: 40px;
+  }
+}
+/* ---------- 1441px ---------- */
+@media (min-width:1444px) {
+  #hero p {
+    width: 57%;
   }
 }
