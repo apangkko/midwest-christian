@@ -234,8 +234,8 @@ header hr {
   color: var(--clr-orange);
   line-height: 1.2;
   text-transform: uppercase;
-  padding-top: 33px;
-  margin-bottom: 40px;
+  padding-top: 2rem;
+  margin-bottom: 3rem;
   width: 10ch;
 }
 #hero h1 > span {
@@ -675,7 +675,7 @@ footer a {
 /* ---------- 1441px ---------- */
 @media (min-width:1444px) {
   #hero p {
-    width: 57%;
+    width: 60%;
   }
 }
 
