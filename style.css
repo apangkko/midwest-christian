@@ -701,6 +701,10 @@ footer a {
   header.sticky .logo__img {
     height: 36px;
   }
+  header.sticky .nav {
+    top: 53px;
+    height: calc(100vh - 53px);
+  }
   .nav {
     position: absolute;
     top: 93px;
