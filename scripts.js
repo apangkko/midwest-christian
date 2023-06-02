@@ -1,16 +1,18 @@
 // ---------- Shrink Header ---------- //
 // When the user scrolls down 50px from the top of the document, resize the header's font size
-window.onscroll = function() {scrollFunction()};
+let prevScrollpos = window.pageYOffset;
 const header = document.getElementsByTagName("header");
 
-function scrollFunction() {
-  console.log(header);
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    header[0].classList.add("sticky");
+window.onscroll = function () {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    header[0].style.top = "0";
   } else {
-    header[0].classList.remove("sticky");
+    header[0].style.top = "-93px";
   }
-}
+  prevScrollpos = currentScrollPos;
+};
+
 
 // ---------- Nav Toggle ---------- //
 const nav = document.querySelector(".nav");
@@ -22,7 +24,7 @@ function toggle() {
 }
 
 window.addEventListener("resize", (e) => {
-  if(window.innerWidth >= 920) {
+  if (window.innerWidth >= 920) {
     nav.classList.remove("active");
     toggleBtn.classList.remove("active");
   }

@@ -257,12 +257,12 @@ header hr {
 }
 
 /* sub menu */
-.subMenu__bg {
+#subMenus {
   background: url(./images/basketball_ellipse-top.svg), url(./images/basketball_M.svg), url(./images/basketball_line.svg), url(./images/basketball_ellipse-bottom.svg), var(--clr-orange);
   background-position: center top, center, top center, bottom center;
   background-repeat: no-repeat, no-repeat, repeat-y, no-repeat;
 }
-.subMenu__bg .container {
+#subMenus .container {
   flex-direction: column;
   justify-content: space-between;
   color: var(--clr-white);
@@ -633,12 +633,12 @@ footer a {
   }
   
   /* sub menu */
-  .subMenu__bg {
+  #subMenus {
     background: url(./images/basketball_ellipse-left.svg), url(./images/basketball_M-desktop.svg), url(./images/basketball_line-desktop.svg), url(./images/basketball_ellipse-right.svg), var(--clr-orange);
     background-position: left center, center, left center, right center;
     background-repeat: no-repeat, no-repeat, repeat-x, no-repeat;
   }
-  .subMenu__bg .container {
+  #subMenus .container {
     flex-direction: row;
     align-items: center;
   }
@@ -684,26 +684,15 @@ footer a {
 }
 
 @media (max-width:919px) {
-  header.sticky {
+  header {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
     left: 0;
     width: 100%;
+    background-color: var(--clr-white);
     z-index: 1000;
-  }
-  header.sticky {
-    background-color: rgba(255, 255, 255, .9)
-  }
-  header.sticky .container {
-    padding-block: 0.5rem;
-  }
-  header.sticky .logo__img {
-    height: 36px;
-  }
-  header.sticky .nav {
-    top: 53px;
-    height: calc(100vh - 53px);
+    transition: top 0.3s;
   }
   .nav {
     position: absolute;
@@ -712,7 +701,7 @@ footer a {
     background-color: var(--clr-white);
     font-size: 1.5rem;
     width: 100%;
-    height: calc(100vh - 93px);
+    height: calc(100vh);
     overflow-y: scroll;
     z-index: 3;
     padding-block: 85px;
