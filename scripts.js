@@ -5,10 +5,15 @@ const header = document.getElementsByTagName("header");
 
 window.onscroll = function () {
   let currentScrollPos = window.pageYOffset;
+  let w = window.innerWidth;
   if (prevScrollpos > currentScrollPos) {
     header[0].style.top = "0";
   } else {
-    header[0].style.top = "-93px";
+    if (w >= 920) {
+      header[0].style.top = "-153px";
+    } else {
+      header[0].style.top = "-93px";
+    }
   }
   prevScrollpos = currentScrollPos;
 };

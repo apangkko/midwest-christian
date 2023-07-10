@@ -174,6 +174,16 @@ ul {
   padding: unset;
 }
 /* header */
+header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--clr-white);
+  z-index: 1000;
+  transition: top 0.3s;
+}
 header .container {
   position: relative;
   padding-block: 1rem;
@@ -209,12 +219,12 @@ header hr {
 }
 
 /* hero */
-#hero {
+.hero {
   position: relative;
   margin-block: 1.5rem;
   min-height: 420px;
 }
-#hero .hero-img {
+.hero .hero-img {
   display: block;
   position: absolute;
   top: 0;
@@ -222,14 +232,12 @@ header hr {
   width: 215px;
   z-index: 0;
 }
-
-#hero .container {
+.hero .container {
   align-content: center;
   position: relative;
   z-index: 1;
 }
-
-#hero h1 {
+.hero h1 {
   font-size: clamp(2rem, 1.522rem + 2.038vw, 3rem);
   color: var(--clr-orange);
   line-height: 1.2;
@@ -237,21 +245,20 @@ header hr {
   padding-top: 2rem;
   margin-bottom: 3rem;
   width: 10ch;
+  /* text-shadow: 2px 1px 1px var(--clr-white); */
+  -webkit-text-stroke: 1px var(--clr-white);
 }
-#hero h1 > span {
+.hero h1 > span {
   color: var(--clr-gray);
   display: block;
 }
-#hero p {
+.hero p {
   font-weight: 300;
 }
-
-#hero p:first-of-type {
+.hero p:first-of-type {
   margin-bottom: clamp(1.25rem, 0.653rem + 2.548vw, 2.5rem);
 }
-
-
-#hero .hilight {
+.hero .hilight {
   color: var(--clr-white);
   background-color: var(--clr-orange);
 }
@@ -287,14 +294,14 @@ header hr {
   background-size: 100%;
 }
 .subMenu.spiritual {
-  background-image: url(./images/home_spiritualGrowth.png);
+  background-image: url(./images/home_spiritualGrowth.webp);
 }
 .subMenu.academics {
   margin-top: 48px;
-  background-image: url(./images/home_academics.png);
+  background-image: url(./images/home_academics.webp);
 }
 .subMenu.athletics {
-  background-image: url(./images/home_athletics.png);
+  background-image: url(./images/home_athletics.webp);
 }
 .subMenu__txt {
   font-weight: 700;
@@ -307,7 +314,6 @@ header hr {
   font-size: clamp(2rem, 1.522rem + 2.038vw, 3rem);
 }
 .subMenu__txt .hilight {
-  color: var(--clr-orange);
   background-color: var(--clr-black);
   padding-inline: 1rem;
 }
@@ -440,19 +446,26 @@ header hr {
   transform: scaleX(-1);
 }
 
+/* CONTENT */
+.content {
+  background-color: var(--clr-light-gray);
+  height: 500px;
+}
+
 /* CTA */
 .cta-heading {
   text-align: center;
 }
 #cta {
-  background-image: url(./images/home_cta_bg.jpg);
+  background-image: url(./images/home_cta_bg.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
-  padding-block: clamp(2.5rem, 1.306rem + 5.096vw, 5rem);
+  padding-top: 2rem;
 }
 #cta .d-flex {
   justify-content: center;
+  padding-block: clamp(2.5rem, 1.306rem + 5.096vw, 5rem);
   gap: clamp(0.625rem, 0.207rem + 1.783vw, 1.5rem);
 }
 
@@ -522,18 +535,21 @@ footer a {
 /* ---------- min 768px ---------- */
 @media screen and (min-width: 768px) {
   /* hero */
-  #hero {
+  .hero {
     margin: 3rem 0 5rem;
   }
-  #hero .hero-img {
+  .hero .hero-img {
     max-width: 42.5rem;
     width: 45%;
   }
-  #hero h1 {
+  .hero.about .hero-img{
+    top: 30%;
+  }
+  .hero h1 {
     padding-top: unset;
     width: unset;
   }
-  #hero p {
+  .hero p {
     width: 53%;
   }
 
@@ -596,7 +612,7 @@ footer a {
   }
 }
 
-/* ---------- min 920px ---------- */
+/* ---------- >= 920px ---------- */
 @media screen and (min-width:920px) {
   /* header */
   header .logo__img {
@@ -606,6 +622,7 @@ footer a {
     font-size: 1.125rem;
     display: flex;
     align-items: center;
+    position: relative;
   }
   .nav__list {
     gap: 1rem;
@@ -631,7 +648,7 @@ footer a {
   .toggle {
     display: none;
   }
-  
+
   /* sub menu */
   #subMenus {
     background: url(./images/basketball_ellipse-left.svg), url(./images/basketball_M-desktop.svg), url(./images/basketball_line-desktop.svg), url(./images/basketball_ellipse-right.svg), var(--clr-orange);
@@ -641,6 +658,7 @@ footer a {
   #subMenus .container {
     flex-direction: row;
     align-items: center;
+    padding-inline: 140px 100px;
   }
   .subMenu__list {
     flex-direction: column;
@@ -676,24 +694,21 @@ footer a {
     justify-content: space-between;
   }
 }
-/* ---------- 1441px ---------- */
+
+/* ---------- >= 1444px ---------- */
 @media (min-width:1444px) {
-  #hero p {
+  .hero p {
     width: 60%;
+  }
+
+  /* SUBMENU */
+  #subMenus .container {
+    padding-inline: var(--container-padding);
   }
 }
 
+/* ---------- <= 919px ---------- */
 @media (max-width:919px) {
-  header {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--clr-white);
-    z-index: 1000;
-    transition: top 0.3s;
-  }
   .nav {
     position: absolute;
     top: 93px;
