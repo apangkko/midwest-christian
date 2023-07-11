@@ -36,9 +36,10 @@ window.addEventListener("resize", (e) => {
 });
 
 // ---------- Swiper JS ---------- //
-var swiper = new Swiper(".testiSlider", {
+// Home - Testimonial
+const swiper1 = new Swiper(".testiSlider", {
   loop: true,
-  slidesPerView: 1,
+  slidesPerView: 'auto',
   breakpoints: {
     // when window width is >= 768px
     768: {
@@ -48,6 +49,30 @@ var swiper = new Swiper(".testiSlider", {
       slidesPerView: 3,
     },
   },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+// About - Facilities
+const swiper2 = new Swiper(".facilitiesSlider", {
+  loop: true,
+  slidesPerView: 1.5,
+  spaceBetween: 16,
+  centeredSlides: true,
+  breakpoints: {
+    // when window width is >= 768px
+    768: {
+      slidesPerView: 2.5,
+    },
+    920: {
+      slidesPerView: 3.5,
+    },
+  },
+  autoplay: {
+    delay: 3000,
+},
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",

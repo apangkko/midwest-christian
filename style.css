@@ -146,6 +146,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  color: var(--clr-black);
   font-family: "Archivo Expanded", sans-serif;
   font-size: clamp(0.875rem, 0.696rem + 0.764vw, 1.25rem);
   font-weight: 300;
@@ -173,7 +174,7 @@ ul {
   list-style: none;
   padding: unset;
 }
-/* header */
+/* HEADER */
 header {
   position: sticky;
   position: -webkit-sticky;
@@ -218,7 +219,7 @@ header hr {
   float: right;
 }
 
-/* hero */
+/* HERO */
 .hero {
   position: relative;
   margin-block: 1.5rem;
@@ -230,7 +231,10 @@ header hr {
   top: 0;
   right: 0;
   width: 215px;
-  z-index: 0;
+  z-index: 1;
+}
+.hero.about .hero-img{
+  right: 5%;
 }
 .hero .container {
   align-content: center;
@@ -245,7 +249,6 @@ header hr {
   padding-top: 2rem;
   margin-bottom: 3rem;
   width: 10ch;
-  /* text-shadow: 2px 1px 1px var(--clr-white); */
   -webkit-text-stroke: 1px var(--clr-white);
 }
 .hero h1 > span {
@@ -416,20 +419,20 @@ header hr {
   margin-top: 1rem;
 
 }
-.swiper-button-prev, .swiper-button-next {
+.testiSlider-control :is(.swiper-button-prev, .swiper-button-next) {
   position: absolute;
   top: 0;
   margin-top: unset;
 }
-.swiper-button-prev {
+.testiSlider-control .swiper-button-prev {
   left: calc(50% - 2rem);
   transform: translateX(-50%);
 }
-.swiper-button-next {
+.testiSlider-control .swiper-button-next {
   right: calc(50% - 2rem);
   transform: translateX(50%);
 }
-.slider-arrow {
+.testiSlider-control .slider-arrow {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -437,19 +440,95 @@ header hr {
   place-items: center;
   background-color: var(--clr-orange);
 }
-.slider-arrow::after {
+.testiSlider-control .slider-arrow::after {
   content: '→';
   font-size: 1.5rem;
   color: var(--clr-white);
 }
-.swiper-button-prev::after {
+.testiSlider-control .swiper-button-prev::after {
   transform: scaleX(-1);
 }
 
 /* CONTENT */
 .content {
+  position: relative;
+  border-top: 1px solid var(--clr-black);
   background-color: var(--clr-light-gray);
-  height: 500px;
+  padding-block: 50px 80px;
+}
+.basketballCourt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.ellipse {
+  display: none;
+}
+
+/* STAFF */
+.staff-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 0.875rem;
+  font-weight: 250;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.staff {
+  display: grid;
+  justify-items: center;
+}
+.staff-img {
+  border-radius: 50%;
+  width: 82px;
+  height: 82px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* FACILITIES */
+.facility-img {
+  height: auto;
+  object-fit: cover;
+}
+
+/* MOTTO */
+.motto {
+  padding-block: 80px;
+}
+.motto-txt {
+  color: var(--clr-orange);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+.motto-txt > .hilight {
+  background-color: var(--clr-black);
+}
+
+/* SAA */
+.saa-lists {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.saa-item {
+  font-size: .875rem;
+  text-align: center;
+}
+.saa-item > h3 {
+  margin-bottom: 12px;
+}
+.saa-item p {
+  color: var(--clr-gray);
 }
 
 /* CTA */
@@ -532,9 +611,9 @@ footer a {
 
 /* ==================== MEDIA QUERY ==================== */
 
-/* ---------- min 768px ---------- */
+/* ---------- >= 768px ---------- */
 @media screen and (min-width: 768px) {
-  /* hero */
+  /* >=768 hero */
   .hero {
     margin: 3rem 0 5rem;
   }
@@ -543,7 +622,7 @@ footer a {
     width: 45%;
   }
   .hero.about .hero-img{
-    top: 30%;
+    top: 25%;
   }
   .hero h1 {
     padding-top: unset;
@@ -553,7 +632,7 @@ footer a {
     width: 53%;
   }
 
-  /* Imagine Learning & Elgibility Registration */
+  /* >=768 Imagine Learning & Elgibility Registration */
   #imgLearning .d-grid {
     grid-template-columns: 1fr 33.33%;
   }
@@ -595,7 +674,7 @@ footer a {
     align-self: center;
   }
 
-  /* Testimonial */
+  /* >=768 Testimonial */
   .testiCard {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -610,11 +689,28 @@ footer a {
   .testiSlider-control {
     margin-top: 1.5rem;
   }
+
+  /* >=768 CONTENT */
+  .ellipse {
+    display: block;
+    position: relative;
+    top: -220px;
+  }
+
+  /* >=768 Motto */
+  .motto-txt {
+    font-size: 3rem;
+  }
+  /* >=768 SSA */
+  .saa-lists {
+    flex-direction: row;
+  }
+
 }
 
 /* ---------- >= 920px ---------- */
 @media screen and (min-width:920px) {
-  /* header */
+  /* >=920 header */
   header .logo__img {
     height: 120px;
   }
@@ -649,7 +745,7 @@ footer a {
     display: none;
   }
 
-  /* sub menu */
+  /* >=920 sub menu */
   #subMenus {
     background: url(./images/basketball_ellipse-left.svg), url(./images/basketball_M-desktop.svg), url(./images/basketball_line-desktop.svg), url(./images/basketball_ellipse-right.svg), var(--clr-orange);
     background-position: left center, center, left center, right center;
@@ -675,7 +771,13 @@ footer a {
     margin-bottom: 40px;
   }
 
-  /* Footer */
+  /* >=920 STAFF */
+  .staff-list {
+    width: 50%;
+    justify-content: space-between;
+  }
+
+  /* >=920 Footer */
   .footer .container {
     grid-template-columns: repeat(4,1fr);
     text-align: left;
@@ -697,11 +799,12 @@ footer a {
 
 /* ---------- >= 1444px ---------- */
 @media (min-width:1444px) {
+  /* >=1444 HERO */
   .hero p {
     width: 60%;
   }
 
-  /* SUBMENU */
+  /* >=1444 SUBMENU */
   #subMenus .container {
     padding-inline: var(--container-padding);
   }
@@ -709,6 +812,7 @@ footer a {
 
 /* ---------- <= 919px ---------- */
 @media (max-width:919px) {
+  /* <=919 MAIN MENU */
   .nav {
     position: absolute;
     top: 93px;
