@@ -36,7 +36,7 @@ window.addEventListener("resize", (e) => {
 });
 
 // ---------- Swiper JS ---------- //
-// Home - Testimonial
+// Swiper - Home > Testimonial
 const swiper1 = new Swiper(".testiSlider", {
   loop: true,
   slidesPerView: 'auto',
@@ -55,7 +55,7 @@ const swiper1 = new Swiper(".testiSlider", {
   },
 });
 
-// About - Facilities
+// Swiper - About > Facilities
 const swiper2 = new Swiper(".facilitiesSlider", {
   loop: true,
   slidesPerView: 1.5,

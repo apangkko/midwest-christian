@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Athletics - Midwest Christian Academy</title>
+  <!-- swiper css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container d-flex">
+      <div class="logo">
+        <a href="index.html"><img class="logo__img" src="./images/logo_midwestchristian.webp"
+            alt="Midwest Christian Academy Logo" /></a>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="about.html" class="nav__link" onclick="toggle()">About MCA</a>
+          </li>
+          <li class="nav__item">
+            <a href="spiritual-growth.html" class="nav__link" onclick="toggle()">Spiritual Growth</a>
+          </li>
+          <li class="nav__item">
+            <a href="academics.html" class="nav__link" onclick="toggle()">Academics</a>
+          </li>
+          <li class="nav__item">
+            <a href="athletics.html" class="nav__link active" onclick="toggle()">Athletics</a>
+          </li>
+        </ul>
+        <div class="nav__cta">
+          <a class="nav__btn nav__btn-white" href="#">Contact us</a>
+          <a class="nav__btn" href="#">Apply Now</a>
+        </div>
+      </nav>
+      <div class="toggle" onclick="toggle()"></div>
+    </div>
+    <hr />
+  </header>
+  <main>
+    <!-- BANNER -->
+    <section class="banner container">
+      <div class="banner-ourgoal">OUR Goals is..</div>
+      <p class="banner-txt">
+        Glorifying god<br />
+        <span class="hilight">Creating men</span>
+      </p>
+      <div class="d-grid">
+        <div class="page-menu-active spiritual">
+          <h1>Our Athletics</h1>
+        </div>
+        <div class="page-info">
+          <h1 class="page-title">Our Athletics</h1>
+          <p class="page-detail" style="color: red;">Nulla eu est odio. Integer placerat congue nisi ut pharetra. Nunc ligula sem, luctus et rhoncus a, semper eu purus. Suspendisse vel felis rhoncus, rhoncus lacus eu, imperdiet risus.  </p>
+        </div>
+      </div>
+    </section>
+    <!-- CONTENT -->
+    <section class="content">
+      <div class="basketballCourt">
+        <img class="ellipse" src="./images/basketball_ellipse-left.svg">
+        <img class="ellipse" src="./images/basketball_ellipse-right.svg">
+      </div>
+      <div class="container">
+        <div class="d-grid">
+          <div class="page-menus">
+            <img class="page-img" src="./images/athletics.webp" alt="">
+            <a href="spiritual-growth.html" class="page-menu spiritual">Spiritual Growth</a>
+            <a href="academics.html" class="page-menu academics">Academics</a>
+
+          </div>
+          <div class="page-content">
+            <p>MCA is one the premiere basketball prep academies in the <br/><br/>
+              <b>NCAA and NAIA Eligibility</b><br/><br/>
+              Each university offering collegiate sports must apply for affiliation to a college sports division defined by criteria including finances, location, and the amount of sports programs offered by the school. NAIA membership allows for a college or university to sponsor competitive athletics at a much lower cost than it would be to join the NCAA at the Division I (DI), Division II (DII), or Division III (DIII) levels. Schools in the NAIA have a strong commitment to providing character-driven intercollegiate athletics and care about students attaining their education and athletic goals.
+            </p>
+            <div class="elgibility__logo d-flex" style="justify-content: flex-start;">
+              <img src="./images/logo_naia.webp" alt="NAIA Logo" />
+              <img src="./images/logo_ncaa.webp" alt="NCAA Logo" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA -->
+    <section id="cta">
+      <div class="container">
+        <h2 class="cta-heading">Take the next step</h2>
+        <hr />
+        <div class="d-flex">
+          <a href="#" class="btn btn-white">More Info</a>
+          <a href="#" class="btn">Apply Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer">
+      <div class="container d-grid">
+        <div class="footer__logo">
+          <img class="footer__logo__img" src="./images/logo_midwestchristian-white.webp"
+            alt="logo_midwestchristian logo" />
+        </div>
+        <div class="footer__contact">
+          <h3>GET IN TOUCH</h3>
+          <p>2651 Burnet Avenue, Cincinnati, OH 45219</p>
+          <p class="footer__contact__email">administration@mca.oh.us</p>
+        </div>
+        <div class="footer__menu">
+          <h3>USEFUL LINKS</h3>
+          <ul>
+            <li><a href="">Academics</a></li>
+            <li><a href="">Staff Directory</a></li>
+            <li><a href="">Apply Now</a></li>
+          </ul>
+        </div>
+        <div class="footer__sic d-flex">
+          <a href="#" class="fa fa-play"></a>
+          <a href="#" class="fa fa-facebook"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <div class="container d-flex">
+        <div class="footer__copyright__txt">
+          © 2023 Midwest Christian Academy
+        </div>
+        <a href="#" class="footer__copyright__terms">Terms & Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- main js -->
+  <script src="scripts.js"></script>
+</body>
+
+</html>

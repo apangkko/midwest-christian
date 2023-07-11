@@ -1,231 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About - Midwest Christian Academy</title>
-    <!-- swiper css -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <!-- icon library -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <!-- main css -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <header>
-      <div class="container d-flex">
-        <div class="logo">
-          <a href="index.html"
-            ><img
-              class="logo__img"
-              src="./images/logo_midwestchristian.webp"
-              alt="Midwest Christian Academy Logo"
-          /></a>
-        </div>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="about.html" class="nav__link" onclick="toggle()"
-                >About MCA</a
-              >
-            </li>
-            <li class="nav__item">
-              <a
-                href="spiritual-growth.html"
-                class="nav__link"
-                onclick="toggle()"
-                >Spiritual Growth</a
-              >
-            </li>
-            <li class="nav__item">
-              <a href="academics.html" class="nav__link" onclick="toggle()"
-                >Academics</a
-              >
-            </li>
-            <li class="nav__item">
-              <a href="athletices.html" class="nav__link" onclick="toggle()"
-                >Athletics</a
-              >
-            </li>
-          </ul>
-          <div class="nav__cta">
-            <a class="nav__btn nav__btn-white" href="#">Contact us</a>
-            <a class="nav__btn" href="#">Apply Now</a>
-          </div>
-        </nav>
-        <div class="toggle" onclick="toggle()"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Midwest Christian Academy</title>
+  <!-- swiper css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <!-- icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- main css -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container d-flex">
+      <div class="logo">
+        <a href="index.html"><img class="logo__img" src="./images/logo_midwestchristian.webp"
+            alt="Midwest Christian Academy Logo" /></a>
       </div>
-      <hr />
-    </header>
-    <main>
-      <!-- HERO -->
-      <section class="hero about" class="d-flex">
-        <img class="hero-img" src="./images/about_hero.webp" />
-        <div class="container d-grid">
-          <h1><span>About</span> Midwest Christian Academy</h1>
-          <p>
-            MCA provides a safe environment where students can maximize their
-            abilities and knowledge in Christ. We strive to create a learning
-            and living experience that
-            <span class="hilight"
-              >equips students for a lifetime of success.</span
-            >
-            Our staff is dedicated to ensuring students thrive and reach their
-            goals. We provide a variety of academic and extracurricular
-            activities designed to maximize student achievement. 
-          </p>
-          <p>
-              <b>Midwest Christian Academy will glorify God by partnering with
-              families to educate, inspire, and equip students to know and serve
-              Jesus Christ in their communities by the power of the Holy
-              Spirit.</b>
-          </p>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="about.html" class="nav__link active" onclick="toggle()">About MCA</a>
+          </li>
+          <li class="nav__item">
+            <a href="spiritual-growth.html" class="nav__link" onclick="toggle()">Spiritual Growth</a>
+          </li>
+          <li class="nav__item">
+            <a href="academics.html" class="nav__link" onclick="toggle()">Academics</a>
+          </li>
+          <li class="nav__item">
+            <a href="athletics.html" class="nav__link" onclick="toggle()">Athletics</a>
+          </li>
+        </ul>
+        <div class="nav__cta">
+          <a class="nav__btn nav__btn-white" href="#">Contact us</a>
+          <a class="nav__btn" href="#">Apply Now</a>
         </div>
-      </section>
-      <!-- STAFF & FACILITIES -->
-      <section class="content">
-        <div class="basketballCourt">
-          <img class="ellipse" src="./images/basketball_ellipse-left.svg">
-          <img class="ellipse" src="./images/basketball_ellipse-right.svg">
-        </div>
-        <div class="container">
-          <h2>Our Staffs</h2>
-          <div class="staff-list">
-            <div class="staff">
-              <img class="staff-img" src="./images/staff01.webp">
-              <p class="staff-name">Bret Dieterle</p>
-              <p class="staff-position">Principal</p>
-            </div>
-            <div class="staff">
-              <img class="staff-img" src="./images/staff02.webp">
-              <p class="staff-name">Tonika Bridges</p>
-              <p class="staff-position">Board Member</p>
-            </div>
-            <div class="staff">
-              <img class="staff-img" src="./images/staff03.webp">
-              <p class="staff-name"> Andrew</p>
-              <p class="staff-position">Teacher /<br/> Trainer Coach</p>
-            </div>
-            <div class="staff">
-              <img class="staff-img" src="./images/staff04.webp">
-              <p class="staff-name">Mwalimul</p>
-              <p class="staff-position">Head Coach</p>
-            </div>
+      </nav>
+      <div class="toggle" onclick="toggle()"></div>
+    </div>
+    <hr />
+  </header>
+  <main>
+    <!-- HERO -->
+    <section class="hero about d-flex">
+      <img class="hero-img" src="./images/about_hero.webp" />
+      <div class="container d-grid">
+        <h1><span>About</span> Midwest Christian Academy</h1>
+        <p>
+          MCA provides a safe environment where students can maximize their
+          abilities and knowledge in Christ. We strive to create a learning
+          and living experience that
+          <span class="hilight">equips students for a lifetime of success.</span>
+          Our staff is dedicated to ensuring students thrive and reach their
+          goals. We provide a variety of academic and extracurricular
+          activities designed to maximize student achievement. 
+        </p>
+        <p>
+          <b>Midwest Christian Academy will glorify God by partnering with
+            families to educate, inspire, and equip students to know and serve
+            Jesus Christ in their communities by the power of the Holy
+            Spirit.</b>
+        </p>
+      </div>
+    </section>
+    <!-- STAFF & FACILITIES -->
+    <section class="content about">
+      <div class="basketballCourt">
+        <img class="ellipse" src="./images/basketball_ellipse-left.svg">
+        <img class="ellipse" src="./images/basketball_ellipse-right.svg">
+      </div>
+      <div class="container">
+        <h2>Our Staffs</h2>
+        <div class="staff-list">
+          <div class="staff">
+            <img class="staff-img" src="./images/staff01.webp">
+            <p class="staff-name">Bret Dieterle</p>
+            <p class="staff-position">Principal</p>
           </div>
-          <!-- End Staff List -->
-          <h2>Our Facilities</h2>
+          <div class="staff">
+            <img class="staff-img" src="./images/staff02.webp">
+            <p class="staff-name">Tonika Bridges</p>
+            <p class="staff-position">Board Member</p>
+          </div>
+          <div class="staff">
+            <img class="staff-img" src="./images/staff03.webp">
+            <p class="staff-name"> Andrew</p>
+            <p class="staff-position">Teacher /<br /> Trainer Coach</p>
+          </div>
+          <div class="staff">
+            <img class="staff-img" src="./images/staff04.webp">
+            <p class="staff-name">Mwalimul</p>
+            <p class="staff-position">Head Coach</p>
+          </div>
         </div>
-        <!-- Slider main container -->
-        <div class="swiper facilitiesSlider">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <img class="swiper-slide facility-img" src="./images/facility01.webp">
-            <img class="swiper-slide facility-img" src="./images/facility02.webp">
-            <img class="swiper-slide facility-img" src="./images/facility03.webp">
-            <img class="swiper-slide facility-img" src="./images/facility01.webp">
-            <img class="swiper-slide facility-img" src="./images/facility02.webp">
-            <img class="swiper-slide facility-img" src="./images/facility03.webp">
-            <img class="swiper-slide facility-img" src="./images/facility01.webp">
-            <img class="swiper-slide facility-img" src="./images/facility02.webp">
-            <img class="swiper-slide facility-img" src="./images/facility03.webp">
-            <img class="swiper-slide facility-img" src="./images/facility01.webp">
-            <img class="swiper-slide facility-img" src="./images/facility02.webp">
-            <img class="swiper-slide facility-img" src="./images/facility03.webp">
+        <!-- End Staff List -->
+        <h2>Our Facilities</h2>
+      </div>
+      <!-- Slider main container -->
+      <div class="swiper facilitiesSlider">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <img class="swiper-slide facility-img" src="./images/facility01.webp">
+          <img class="swiper-slide facility-img" src="./images/facility02.webp">
+          <img class="swiper-slide facility-img" src="./images/facility03.webp">
+          <img class="swiper-slide facility-img" src="./images/facility01.webp">
+          <img class="swiper-slide facility-img" src="./images/facility02.webp">
+          <img class="swiper-slide facility-img" src="./images/facility03.webp">
+          <img class="swiper-slide facility-img" src="./images/facility01.webp">
+          <img class="swiper-slide facility-img" src="./images/facility02.webp">
+          <img class="swiper-slide facility-img" src="./images/facility03.webp">
+          <img class="swiper-slide facility-img" src="./images/facility01.webp">
+          <img class="swiper-slide facility-img" src="./images/facility02.webp">
+          <img class="swiper-slide facility-img" src="./images/facility03.webp">
         </div>
-      </section>
-      <!-- MOTTO -->
-      <section class="motto">
-        <div class="container">
-          <h2>The MCA Motto...</h2>
-          <p class="motto-txt">Whatever you do,<br/>
-            <span class="hilight">Do it with your whole heart,</span><br/>
-            As Working for the Lord.</p>
-            <div class="saa-lists">
-              <!-- Spiritual -->
-              <div class="saa-item">
-                <h3>Spiritual Growth</h3>
-                <p>Spiritual growth and individual harmony creates individual students capable of overcoming difficulties and humbly progressing 
-                  through life.</p>
-              </div>
-              <!-- Academics -->
-              <div class="saa-item">
-                <h3>Academics</h3>
-                <p>Students deserve an academic program that provides for their individual needs, yet 
-                  challenges them to develop
-                  critical thinking skills.</p>
-              </div>
-              <!-- Athletics -->
-              <div class="saa-item">
-                <h3>Athletics</h3>
-                <p>MCA has developed an elite basketball training program specifically designed to create athletes capable of competing at the highest levels
-                  of the game.</p>
-              </div>
-            </div>
+      </div>
+    </section>
+    <!-- MOTTO -->
+    <section class="motto">
+      <div class="container">
+        <h2>The MCA Motto...</h2>
+        <p class="motto-txt">Whatever you do,<br />
+          <span class="hilight">Do it with your whole heart,</span><br />
+          As Working for the Lord.
+        </p>
+        <div class="saa-lists">
+          <!-- Spiritual -->
+          <div class="saa-item">
+            <h3>Spiritual Growth</h3>
+            <p>Spiritual growth and individual harmony creates individual students capable of overcoming difficulties
+              and humbly progressing
+              through life.</p>
+          </div>
+          <!-- Academics -->
+          <div class="saa-item">
+            <h3>Academics</h3>
+            <p>Students deserve an academic program that provides for their individual needs, yet
+              challenges them to develop
+              critical thinking skills.</p>
+          </div>
+          <!-- Athletics -->
+          <div class="saa-item">
+            <h3>Athletics</h3>
+            <p>MCA has developed an elite basketball training program specifically designed to create athletes capable
+              of competing at the highest levels
+              of the game.</p>
+          </div>
         </div>
-      </section>
-      <!-- CTA -->
-      <section id="cta">
-        <div class="container">
-          <h2 class="cta-heading">Take the next step</h2>
+      </div>
+    </section>
+    <!-- CTA -->
+    <section id="cta">
+      <div class="container">
+        <h2 class="cta-heading">Take the next step</h2>
         <hr />
         <div class="d-flex">
           <a href="#" class="btn btn-white">More Info</a>
           <a href="#" class="btn">Apply Now</a>
         </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer">
+      <div class="container d-grid">
+        <div class="footer__logo">
+          <img class="footer__logo__img" src="./images/logo_midwestchristian-white.webp"
+            alt="logo_midwestchristian logo" />
         </div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer">
-        <div class="container d-grid">
-          <div class="footer__logo">
-            <img
-              class="footer__logo__img"
-              src="./images/logo_midwestchristian-white.webp"
-              alt="logo_midwestchristian logo"
-            />
-          </div>
-          <div class="footer__contact">
-            <h3>GET IN TOUCH</h3>
-            <p>2651 Burnet Avenue, Cincinnati, OH 45219</p>
-            <p class="footer__contact__email">administration@mca.oh.us</p>
-          </div>
-          <div class="footer__menu">
-            <h3>USEFUL LINKS</h3>
-            <ul>
-              <li><a href="">Academics</a></li>
-              <li><a href="">Staff Directory</a></li>
-              <li><a href="">Apply Now</a></li>
-            </ul>
-          </div>
-          <div class="footer__sic d-flex">
-            <a href="#" class="fa fa-play"></a>
-            <a href="#" class="fa fa-facebook"></a>
-          </div>
+        <div class="footer__contact">
+          <h3>GET IN TOUCH</h3>
+          <p>2651 Burnet Avenue, Cincinnati, OH 45219</p>
+          <p class="footer__contact__email">administration@mca.oh.us</p>
+        </div>
+        <div class="footer__menu">
+          <h3>USEFUL LINKS</h3>
+          <ul>
+            <li><a href="">Academics</a></li>
+            <li><a href="">Staff Directory</a></li>
+            <li><a href="">Apply Now</a></li>
+          </ul>
+        </div>
+        <div class="footer__sic d-flex">
+          <a href="#" class="fa fa-play"></a>
+          <a href="#" class="fa fa-facebook"></a>
         </div>
       </div>
-      <div class="footer__copyright">
-        <div class="container d-flex">
-          <div class="footer__copyright__txt">
-            © 2023 Midwest Christian Academy
-          </div>
-          <a href="#" class="footer__copyright__terms">Terms & Privacy</a>
+    </div>
+    <div class="footer__copyright">
+      <div class="container d-flex">
+        <div class="footer__copyright__txt">
+          © 2023 Midwest Christian Academy
         </div>
+        <a href="#" class="footer__copyright__terms">Terms & Privacy</a>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!-- swiper js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <!-- main js -->
-    <script src="scripts.js"></script>
-  </body>
+  <!-- swiper js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- main js -->
+  <script src="scripts.js"></script>
+</body>
+
 </html>

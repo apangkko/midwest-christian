@@ -203,10 +203,13 @@ nav a {
   display: flex;
   padding: 0;
 }
-.nav__item {
+.nav__link {
   transition: .3s ease-out;
 }
-.nav__item:hover {
+.nav__link.active {
+  color: var(--clr-orange);
+}
+.nav__link:hover {
   opacity: 0.6;
 }
 .nav__cta {
@@ -266,7 +269,7 @@ header hr {
   background-color: var(--clr-orange);
 }
 
-/* sub menu */
+/* Home - SUBMENU */
 #subMenus {
   background: url(./images/basketball_ellipse-top.svg), url(./images/basketball_M.svg), url(./images/basketball_line.svg), url(./images/basketball_ellipse-bottom.svg), var(--clr-orange);
   background-position: center top, center, top center, bottom center;
@@ -294,7 +297,8 @@ header hr {
   font-weight: 900;
   text-align: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  transition: .3s ease-out;
 }
 .subMenu.spiritual {
   background-image: url(./images/home_spiritualGrowth.webp);
@@ -305,6 +309,9 @@ header hr {
 }
 .subMenu.athletics {
   background-image: url(./images/home_athletics.webp);
+}
+.subMenu:is(.spiritual, .academics, .athletics):hover {
+  transform: scale(1.1);
 }
 .subMenu__txt {
   font-weight: 700;
@@ -321,7 +328,7 @@ header hr {
   padding-inline: 1rem;
 }
 
-/* Imagine Learning & Elgibility Registration */
+/* Home - Imagine Learning & Elgibility Registration */
 #imgLearning, #elgibility {
   position: relative;
   background-color: var(--clr-light-gray);
@@ -374,7 +381,7 @@ header hr {
   width: clamp(6.563rem, 5.518rem + 4.459vw, 8.75rem);
 }
 
-/* Testimonial */
+/* Home - Testimonial */
 #testimonial {
   padding-block: clamp(2.5rem, 1.306rem + 5.096vw, 5rem);
 }
@@ -449,11 +456,67 @@ header hr {
   transform: scaleX(-1);
 }
 
+/* BANNER */
+.banner {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-block: 40px;
+}
+.banner-ourgoal {
+  color: var(--clr-gray);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.banner-txt {
+  color: var(--clr-gray);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.banner-txt > .hilight {
+  background-color: var(--clr-orange);
+  color: var(--clr-white);
+}
+.page-menu-active {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+  /* position: relative; */
+  background-size: cover;
+  color: var(--clr-white);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.page-menu-active h1 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.page-menu-active.spiritual {
+  background-image: url(./images/spiritual.webp);
+}
+.page-menu-active.academics {
+  background-image: url(./images/academics.webp);
+}
+.page-menu-active.athletics {
+  background-image: url(./images/athletics.webp);
+}
+.page-title {
+  display: none;
+}
+.page-detail {
+  text-align: center;
+  text-transform: none;
+}
+
 /* CONTENT */
 .content {
   position: relative;
   border-top: 1px solid var(--clr-black);
   background-color: var(--clr-light-gray);
+  padding-block: 32px 60px;
+}
+.content.about {
   padding-block: 50px 80px;
 }
 .basketballCourt {
@@ -465,6 +528,9 @@ header hr {
   justify-content: space-between;
 }
 .ellipse {
+  display: none;
+}
+.page-img, .page-menu {
   display: none;
 }
 
@@ -690,11 +756,86 @@ footer a {
     margin-top: 1.5rem;
   }
 
+  /* >=768 BANNER */
+  .banner {
+    margin-block: 80px 32px;
+  }
+  .banner-ourgoal {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .banner-txt {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  .banner > .d-grid {
+    justify-content: end;
+    grid-template-columns: 60%;
+    padding-left: 40px;
+  }
+  .page-menu-active {
+    display: none;
+  }
+  .page-title {
+    display: block;
+    color: var(--clr-orange);
+    font-size: 2.5rem;
+    margin-bottom: 32px;
+  }
+  .page-detail {
+    text-align: unset;
+  }
+
   /* >=768 CONTENT */
   .ellipse {
     display: block;
     position: relative;
     top: -220px;
+  }
+  .content .d-grid {
+    grid-template-columns: 40% 60%;
+    gap: 20px;
+  }
+  .page-menus {
+    position: relative;
+    top: -30%;
+    margin-bottom: -35%;
+    display: grid;
+    gap: 40px;
+    align-content: start;
+    justify-items: center;
+    text-align: center;
+  }
+  .page-img, .page-menu {
+    display: block;
+  }
+  .page-menu {
+    display: grid;
+    place-items: center;
+    width: 240px;
+    height: 240px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    color: var(--clr-orange);
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    transition: .3s ease-out;
+  }
+  .page-menu:hover {
+    transform: scale(1.1);
+  }
+  .page-menu.spiritual {
+    background-image: url(./images/menu_spiritual.webp);
+  }
+  .page-menu.academics {
+    background-image: url(./images/menu_academics.webp);
+  }
+  .page-menu.athletics {
+    background-image: url(./images/menu_athletics.webp);
   }
 
   /* >=768 Motto */
