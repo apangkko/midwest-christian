@@ -264,7 +264,9 @@
     </div>
     <div class="footer__copyright">
       <div class="container d-flex">
-        <div class="footer__copyright__txt">© 2023 Midwest Christian Academy</div>
+        <div class="footer__copyright__txt">
+          © 2023 Midwest Christian Academy
+        </div>
         <a href="#" class="footer__copyright__terms">Terms & Privacy</a>
       </div>
     </div>
@@ -272,6 +274,26 @@
 
   <!-- swiper js -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    // Swiper - Home > Testimonial
+    const swiper = new Swiper(".testiSlider", {
+      loop: true,
+      slidesPerView: "auto",
+      breakpoints: {
+        // when window width is >= 768px
+        768: {
+          slidesPerView: 2,
+        },
+        920: {
+          slidesPerView: 3,
+        },
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
   <!-- main js -->
   <script src="scripts.js"></script>
 </body>
